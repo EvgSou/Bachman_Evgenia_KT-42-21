@@ -1,5 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 //  using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using System.Text.Json.Serialization;
 
 namespace BachmanEvgeniaKT_42_21.Models
 {
@@ -10,6 +13,8 @@ namespace BachmanEvgeniaKT_42_21.Models
 
 
         public string GroupName { get; set; }
+
+        [JsonIgnore]
 
         public List<Subject>? Subject { get; set; }
 

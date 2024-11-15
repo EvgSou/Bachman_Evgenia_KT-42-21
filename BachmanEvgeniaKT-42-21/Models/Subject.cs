@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Text.Json.Serialization;
 
 
 namespace BachmanEvgeniaKT_42_21.Models
@@ -9,7 +11,7 @@ namespace BachmanEvgeniaKT_42_21.Models
         public int SubjectId { get; set; }
         public string SubjectName { get; set; }
         public int GroupId { get; set; }
-
+        [JsonIgnore]
         public Group? Group { get; set; }
 
 
