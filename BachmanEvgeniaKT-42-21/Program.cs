@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using NLog;
 using NLog.Web;
 using static BachmanEvgeniaKT_42_21.ServiceExtensions.ServiceExtensions;
+using BachmanEvgeniaKT_42_21.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,6 +36,8 @@ try
         app.UseSwagger();
         app.UseSwaggerUI();
     }
+
+    app.UseMiddleware<ExceptionHandlerMiddleware>();
 
     app.UseAuthorization();
 
