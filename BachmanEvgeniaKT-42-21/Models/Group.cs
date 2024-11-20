@@ -18,7 +18,11 @@ namespace BachmanEvgeniaKT_42_21.Models
 
         public List<Subject>? Subject { get; set; }
 
-
+        public bool IsValidGroupName()
+        {
+            //return Regex.Match(GroupName, @"\w*-\d*-\d{2}$").Success;
+            return Regex.Match(GroupName, @"^[А-ЯA-Zа-яa-z]*-\d*-\d{2}$").Success;
+        }
 
         // public List<Student> Students { get; set; }
 
